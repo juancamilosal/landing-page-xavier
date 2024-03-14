@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: Montserrat, sans-serif ;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 01rem;
+}
+
+input {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+}
+
+label {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+
+select {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    background-image: linear-gradient(to bottom, #dadbdc, #e3e4e5, #ededed, #f6f6f6, #ffffff);;
+}
+
+.button-send {
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+}
+
+.container-2 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/img/FORNE_12_Residence_R_Living_Dining_HIGH_C.nexojpg.jpg');
+}
+
