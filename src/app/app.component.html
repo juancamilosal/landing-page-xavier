@@ -9,13 +9,13 @@
      <section class="bg-[#4a546a] w-full p-2 pb-10">
    <div class="flex flex-col justify-center text-center text-2xl ">
        <div class="z-1">
-           <h1 class="my-2 text-[#b9dd71]">ASEGURA TU PATRIMONIO EN LOS ESTADOS UNIDOS</h1>
-           <p class="text-[#dadbdc]">Tu inversión en bienes raíces, comienza con los 40 minutos que le dediques a este webinar gratuito</p>
+           <h1 class="mx-2 text-[#b9dd71] text-xl">ASEGURA TU PATRIMONIO EN LOS ESTADOS UNIDOS</h1>
+           <p class="text-[#dadbdc]  mt-2 ">Tu inversión en bienes raíces, comienza con los 40 minutos que le dediques a este webinar gratuito</p>
        </div>
-       <div  class="flex justify-center my-10">
-       <div class="max-w-96">
-           <video controls>
-               <source src="assets/video/VIDEO%20XAVIER.mp4" type="video/mp4">
+       <div  class="flex justify-center items-start my-10">
+       <div class="max-w-72">
+               <video  id="videoPlayer" controls autoplay>
+               <source  src="assets/video/VIDEO%20XAVIER.mp4" type="video/mp4">
            </video>
        </div>
        </div>
@@ -72,9 +72,9 @@
 @if (mostrarSeccion) {
     <section class="bg-[#4a546a] w-full p-2 pb-10 flex justify-evenly">
         <div class="flex flex-col text-3xl">
-            <div class="flex flex-col">
-                <h1 class="my-2 text-[#b9dd71] text-4xl ">Asegura tu patrimonio en los Estados Unidos </h1>
-                <p class="text-[#dadbdc]">Tu inversión en bienes raíces, comienza con los 40 minutos que le dediques a este webinar gratuito</p>
+            <div class="flex flex-col pl-5">
+                <h1 class="my-2 text-[#b9dd71] text-5xl ">ASEGURA TU PATRIMONIO <br> EN LOS ESTADOS UNIDOS </h1>
+                <p class="text-[#dadbdc] tracking-[.20em] ">Tu inversión en bienes raíces, comienza con los 40 minutos <br> que le dediques a este webinar gratuito</p>
             </div>
             <div class="flex justify-center my-10">
                 <div class="flex justify-center w-full">
@@ -122,11 +122,13 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-center w-96 m-10">
-                <video controls start="6">
+        <div class="flex justify-center">
+        <div class="flex pt-10 w-96">
+                <video controls start="2" autoplay>
                     <source src="assets/video/VIDEO%20XAVIER.mp4" type="video/mp4">
                 </video>
             </div>
+        </div>
     </section>
 }
 
@@ -186,7 +188,7 @@
                 </div>
                 <div class="text-start">
                     <p class="leading-6">"Ellos no solo nos ayudan a levantar las rentas de la casa que ya teníamos sino que tiempo después decidimos invertir
-                        en una segunda propiedad, la que ellos nos recomendaron , y nos comenzó a ir tan que invertimos en otra más igualita"</p>
+                        en una segunda propiedad, la que ellos nos recomendaron, y nos comenzó a ir tan bien que invertimos en otra más igualita"</p>
                     <strong>Francisco Sevilla</strong>
                 </div>
             </div>
