@@ -3,6 +3,8 @@
         <img class="w-40 h-20" src="assets/img/LOGO%20SEGUNDARIO.png" >
     </div>
 </header>
+
+<!--Versión Mobil-->
 @if (!mostrarSeccion) {
      <section class="bg-[#4a546a] w-full p-2 pb-10">
    <div class="flex flex-col justify-center text-center text-2xl ">
@@ -10,9 +12,12 @@
            <h1 class="my-2 text-[#b9dd71]">ASEGURA TU PATRIMONIO EN LOS ESTADOS UNIDOS</h1>
            <p class="text-[#dadbdc]">Tu inversión en bienes raíces, comienza con los 40 minutos que le dediques a este webinar gratuito</p>
        </div>
-       <div class="flex justify-center">
-           <img class="w-48 h-96 my-6 rounded-md shadow-gray-950 shadow-md "
-                src="assets/img/32641e95-057a-4c90-ad89-2483f7df5ff3.jpg">
+       <div  class="flex justify-center my-10">
+       <div class="max-w-96">
+           <video controls>
+               <source src="assets/video/VIDEO%20XAVIER.mp4" type="video/mp4">
+           </video>
+       </div>
        </div>
    </div>
    <div>
@@ -63,6 +68,7 @@
 </section>
 }
 
+<!--Versión Escritorio-->
 @if (mostrarSeccion) {
     <section class="bg-[#4a546a] w-full p-2 pb-10 flex justify-evenly">
         <div class="flex flex-col text-3xl">
@@ -70,7 +76,7 @@
                 <h1 class="my-2 text-[#b9dd71] text-4xl ">Asegura tu patrimonio en los Estados Unidos </h1>
                 <p class="text-[#dadbdc]">Tu inversión en bienes raíces, comienza con los 40 minutos que le dediques a este webinar gratuito</p>
             </div>
-            <div class="flex justify-center my-5">
+            <div class="flex justify-center my-10">
                 <div class="flex justify-center w-full">
                     <form class="text-start bg-white  md:w-1/2 p-5 rounded-2xl mx-2 shadow-gray-950 shadow-md">
                         <div class="relative z-0 w-full mb-5 group">
@@ -116,9 +122,11 @@
                 </div>
             </div>
         </div>
-        <div class="flex justify-start w-1/4 h-100 mx-5">
-            <img class="my-6 rounded-md shadow-gray-950 shadow-md" src="assets/img/32641e95-057a-4c90-ad89-2483f7df5ff3.jpg" style="max-width: 100%; height: auto; object-fit: cover;">
-        </div>
+        <div class="flex justify-center w-96 m-10">
+                <video controls start="6">
+                    <source src="assets/video/VIDEO%20XAVIER.mp4" type="video/mp4">
+                </video>
+            </div>
     </section>
 }
 
