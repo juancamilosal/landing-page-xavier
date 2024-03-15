@@ -1,6 +1,7 @@
-import {Component, HostListener} from '@angular/core';
+import {Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -10,44 +11,19 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  showCountryOptions: boolean = false;
-  showCityOptions: boolean = false;
-  selectedCountry: string = '';
-  selectedCity: string = '';
 
   countries: string[] = ['País 1', 'País 2', 'País 3'];
   cities: string[] = ['Ciudad 1', 'Ciudad 2', 'Ciudad 3'];
+  mostrarSeccion: boolean = false;
 
-  toggleCountryOptions() {
-    this.showCountryOptions = !this.showCountryOptions;
-    if (!this.showCountryOptions) {
-      this.selectedCountry = '';
-    }
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
-  toggleCityOptions() {
-    this.showCityOptions = !this.showCityOptions;
-    if (!this.showCityOptions) {
-      this.selectedCity = '';
-    }
-  }
+  ngOnInit() {
+    this.mostrarSeccion = window.innerWidth > 767; // Verifica el ancho inicialmente
 
-  selectCountry(country: string) {
-    this.selectedCountry = country;
-    this.showCountryOptions = false;
-  }
-
-  selectCity(city: string) {
-    this.selectedCity = city;
-    this.showCityOptions = false;
-  }
-
-  @HostListener('document:click', ['$event'])
-  closeOptions(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.select-container')) {
-      this.showCountryOptions = false;
-      this.showCityOptions = false;
-    }
+    // Observa cambios en el tamaño de la ventana y ajusta la visibilidad de la sección
+    window.addEventListener('resize', () => {
+      this.mostrarSeccion = window.innerWidth > 767;
+    });
   }
 }
