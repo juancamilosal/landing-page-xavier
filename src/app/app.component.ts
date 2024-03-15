@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+
 
 @Component({
   selector: 'app-root',
@@ -10,20 +10,20 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-
-  countries: string[] = ['País 1', 'País 2', 'País 3'];
-  cities: string[] = ['Ciudad 1', 'Ciudad 2', 'Ciudad 3'];
-  mostrarSeccion: boolean = false;
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
+export class AppComponent implements OnInit{
 
   ngOnInit() {
-    this.mostrarSeccion = window.innerWidth > 767; // Verifica el ancho inicialmente
+    this.mostrarSeccion = window.innerWidth > 767;
 
-    // Observa cambios en el tamaño de la ventana y ajusta la visibilidad de la sección
+
     window.addEventListener('resize', () => {
       this.mostrarSeccion = window.innerWidth > 767;
     });
   }
+  countries: string[] = ['País 1', 'País 2', 'País 3'];
+  cities: string[] = ['Ciudad 1', 'Ciudad 2', 'Ciudad 3'];
+  mostrarSeccion: boolean = false;
+
+  constructor() {}
+
 }
