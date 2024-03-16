@@ -13,9 +13,9 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit{
 
   ngOnInit() {
-    this.mostrarSeccion = window.innerWidth > 767;
+    this.mostrarSeccion = window.innerWidth >= 1024;
     window.addEventListener('resize', () => {
-      this.mostrarSeccion = window.innerWidth > 767;
+      this.mostrarSeccion = window.innerWidth >= 1024;
     });
 
   }
