@@ -46,3 +46,6 @@ select {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/img/FORNE_12_Residence_R_Living_Dining_HIGH_C.nexojpg.jpg');
 }
 
+option {
+    font-family: Montserrat, sans-serif ;
+}
