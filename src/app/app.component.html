@@ -3,7 +3,7 @@
         <img class="w-48" ngSrc="assets/img/LOGO-SEGUNDARIO.webp" alt="Logo Xavier Salcedo" height="733"
              width="1562">
         <div class="fixed bottom-8 right-8 z-10">
-            <a href="https://wa.me/3107590071?text=HOLA"
+            <a href="https://wa.me/3107590071?text=HOLA" aria-label="Link para WhatApp"
                class="flex items-center space-x-2 bg-[#4a546a] hover:bg-white hover:text-[#4a546a] text-white py-3 px-4 rounded-full shadow-md">
                 <i class="fab fa-whatsapp text-3xl sm:text-5xl"></i>
             </a>
@@ -54,8 +54,8 @@
                     </div>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="relative z-0 w-full mb-5 group">
-                            <div class="select-container">
-                                <select id="countryMobile" name="country" class="text-left w-full rounded p-2 text-sm">
+                            <div id="countryLabelMobil" class="select-container">
+                                <select id="countryMobile" name="country"  aria-labelledby="countryLabelMobil" class="text-left w-full rounded p-2 text-sm">
                                     <option value="">País</option>
                                     <option *ngFor="let country of countries"> {{ country.name.common }}</option>
                                 </select>
@@ -117,8 +117,8 @@
                         </div>
                         <div class="grid grid-cols-2 gap-6">
                             <div class="relative z-0 w-full mb-5 group ">
-                                <div class="select-container">
-                                    <select  id="countryDesktop" name="country" class="text-left w-full rounded p-2 text-sm">
+                                <div id="countryLabelDesktop" class="select-container">
+                                    <select   id="countryDesktop" name="country" aria-labelledby="countryLabelDesktop" class="text-left w-full rounded p-2 text-sm">
                                         <option value="">País</option>
                                         <option *ngFor="let country of countries"> {{ country.name.common }}</option>
                                     </select>
