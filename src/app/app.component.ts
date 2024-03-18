@@ -22,7 +22,6 @@ export class AppComponent implements OnInit{
     this.showCountries()
   }
   countries: CountryModel[];
-  cities: string[] = ['Ciudad 1', 'Ciudad 2', 'Ciudad 3'];
   mostrarSeccion: boolean = false;
 
 
