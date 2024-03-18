@@ -1,6 +1,7 @@
 <header>
     <div class="flex justify-start h-20 items-center">
-        <img class="w-40 h-20" src="assets/img/LOGO%20SEGUNDARIO.png">
+        <img class="w-40 h-20" ngSrc="assets/img/LOGO%20SEGUNDARIO.webp" alt="Logo Xavier Salcedo" height="733"
+             width="1562">
         <div class="fixed bottom-8 right-8 z-10">
             <a href="https://wa.me/3107590071?text=HOLA"
                class="flex items-center space-x-2 bg-[#4a546a] hover:bg-white hover:text-[#4a546a] text-white py-3 px-4 rounded-full shadow-md">
@@ -22,7 +23,7 @@
             <div class="flex justify-center items-start my-8">
                 <div class="max-w-72">
                     <video class="rounded-2xl" controls autoplay>
-                        <source src="assets/video/VIDEO%20XAVIER.mp4" type="video/mp4">
+                        <source src="assets/video/VIDEO%20XAVIER%20.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -31,30 +32,30 @@
             <div class="flex justify-center">
                 <form class="bg-white w-96 p-5 rounded-2xl mx-2 md:w-1/2 shadow-gray-950 shadow-md">
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text"
+                        <input id="nameLastNameMobile" name="nameLastName" type="text "
                                class="block  pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-border-[#b9dd71]  peer"
                                placeholder=" " required/>
-                        <label class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Nombre
+                        <label for="nameLastNameMobile" class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Nombre
                             y Apellido</label>
                     </div>
                     <div>
                         <div class="relative z-0 w-full mb-5 group">
-                            <input type="email"
+                            <input  id="emailMobile" name="email"  type="email"
                                    class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71]  focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                    placeholder=" " required/>
-                            <label class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Email</label>
+                            <label for="emailMobile" class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Email</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group">
-                            <input type="number"
+                            <input  id="phoneMobile" name="phone" type="number"
                                    class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                    placeholder=" " required/>
-                            <label class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Teléfono</label>
+                            <label for="phoneMobile" class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Teléfono</label>
                         </div>
                     </div>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="relative z-0 w-full mb-5 group">
                             <div class="select-container">
-                                <select class="text-left w-full rounded p-2 text-sm">
+                                <select id="countryMobile" name="country" class="text-left w-full rounded p-2 text-sm">
                                     <option value="">País</option>
                                     <option *ngFor="let country of countries"> {{ country.name.common }}</option>
                                 </select>
@@ -62,10 +63,10 @@
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
                             <div class="select-container">
-                                <input type="text"
+                                <input id="cityMobile" name="city" type="text"
                                        class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                        placeholder=" " required/>
-                                <label class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Ciudad</label>
+                                <label for="cityMobile" class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Ciudad</label>
                             </div>
                         </div>
                     </div>
@@ -94,30 +95,30 @@
                 <div class="flex justify-center w-full">
                     <form class="text-start bg-white  md:w-1/2 p-5 rounded-2xl mx-2 shadow-gray-950 shadow-md">
                         <div class="relative z-0 w-full mb-5 group">
-                            <input type="text"
+                            <input id="nameLastNameDesktop" name="nameLastName" type="text"
                                    class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                    placeholder=" " required/>
-                            <label class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Nombre
+                            <label for="nameLastNameDesktop" class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Nombre
                                 y Apellido</label>
                         </div>
                         <div>
                             <div class="relative z-0 w-full mb-5 group">
-                                <input type="email"
+                                <input id="emailDesktop" name="email" type="email"
                                        class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                        placeholder=" " required/>
-                                <label class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Email</label>
+                                <label for="emailDesktop" class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Email</label>
                             </div>
                             <div class="relative z-0 w-full mb-5 group">
-                                <input type="number"
+                                <input  id="phoneDesktop" name="phone" type="number"
                                        class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                        placeholder=" " required/>
-                                <label class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Teléfono</label>
+                                <label for="phoneDesktop" class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Teléfono</label>
                             </div>
                         </div>
                         <div class="grid grid-cols-2 gap-6">
                             <div class="relative z-0 w-full mb-5 group ">
                                 <div class="select-container">
-                                    <select class="text-left w-full rounded p-2 text-sm">
+                                    <select  id="countryDesktop" name="country" class="text-left w-full rounded p-2 text-sm">
                                         <option value="">País</option>
                                         <option *ngFor="let country of countries"> {{ country.name.common }}</option>
                                     </select>
@@ -125,10 +126,10 @@
                             </div>
                             <div class="relative z-0 w-full mb-5 group">
                                 <div class="relative z-0 w-full mb-5 group">
-                                    <input type="text"
+                                    <input  id="cityDesktop" name="city" type="text"
                                            class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                            placeholder=" " required/>
-                                    <label class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Ciudad</label>
+                                    <label for="cityDesktop" class="peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] peer-focus:dark:text-[#b9dd71] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6">Ciudad</label>
                                 </div>
                             </div>
                         </div>
@@ -145,7 +146,7 @@
         <div class="flex justify-center items-center">
             <div class="flex pt-10 w-96">
                 <video class="rounded-2xl" controls autoplay>
-                    <source src="assets/video/VIDEO%20XAVIER.mp4" type="video/mp4">
+                    <source src="assets/video/VIDEO%20XAVIER%20.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -394,7 +395,8 @@
 
 <footer>
     <div class="flex justify-center h-20 items-center my-4">
-        <img class="w-60 h-20" src="assets/img/LOGO%20PRINCIPAL.png">
+        <img class="w-60 h-20" ngSrc="assets/img/LOGO%20PRINCIPAL.webp" alt="Logo Xavier Salcedo" height="1080"
+             width="2679">
     </div>
 </footer>
 
