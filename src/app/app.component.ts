@@ -112,7 +112,6 @@ export class AppComponent implements OnInit{
     }
 
     if(this.formRegistration.valid) {
-
       Swal.fire({
         title: "Registro Enviado",
         icon: "success"
