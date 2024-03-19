@@ -113,7 +113,8 @@ export class AppComponent implements OnInit{
 
     if(this.formRegistration.valid) {
       Swal.fire({
-        title: "Registro Enviado",
+        title: "¡Ya estás registrado!",
+        text: "En los próximos días recibirás la invitación al webinar en el que contaré cómo invertir en los Estados Unidos.",
         icon: "success"
       });
 
