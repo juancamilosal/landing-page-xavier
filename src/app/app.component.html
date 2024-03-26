@@ -3,7 +3,7 @@
         <img class="w-48" src="assets/img/LOGO-SEGUNDARIO.webp" alt="Logo Xavier Salcedo" height="733"
              width="1562">
         <div class="fixed bottom-8 right-8 z-10">
-            <a href="https://wa.me/3465814158?text=HOLA" aria-label="Link para WhatApp" target="_blank"
+            <a href="https://wa.me/13465814158" aria-label="Link para WhatApp" target="_blank"
                class="flex items-center space-x-2 bg-green-400 hover:bg-white hover:text-[#4a546a] text-white py-3 px-4 rounded-full shadow-md">
                 <i class="fab fa-whatsapp text-3xl sm:text-5xl"></i>
             </a>
@@ -30,24 +30,31 @@
         </div>
         <div>
             <div class="flex justify-center">
-                <form [formGroup]="formRegistration" class="bg-white w-96 p-5 rounded-2xl mx-2 md:w-1/2 shadow-gray-950 shadow-md">
+                <form  method="post" name="contact-form" action="" class="bg-white w-96 p-5 rounded-2xl mx-2 md:w-1/2 shadow-gray-950 shadow-md">
                     <div class="relative z-0 w-full mb-5 group">
-                        <input id="nameLastNameMobile" name="nameLastName" type="text " formControlName="name"
+                        <input id="firstNameMobile" name="First Name" type="text " formControlName="name" [value]="nameValue"
                                class="block  pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-border-[#b9dd71]  peer"
                                placeholder=" " required/>
-                        <label for="nameLastNameMobile" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
+                        <label for="firstNameMobile" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
                             {{name}}</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input id="lastNameMobile" name="Last Name" type="text" formControlName="lastName"
+                               class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
+                               placeholder=" " required/>
+                        <label for="lastNameMobile" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
+                            {{lastName}}</label>
                     </div>
                     <div>
                         <div class="relative z-0 w-full mb-5 group">
-                            <input  id="emailMobile" name="email"  type="email" formControlName="email"
+                            <input  id="emailMobile" name="Personal Email"  type="email" formControlName="email"  [value]="emailValue"
                                    class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71]  focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                    placeholder=" " required/>
                             <label for="emailMobile" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
                                 {{email}}</label>
                         </div>
                         <div class="relative z-0 w-full mb-5 group">
-                            <input  id="phoneMobile" name="phone" type="number" formControlName="phone"
+                            <input  id="phoneMobile" name="Cell Phone" type="number" formControlName="phone"  [value]="phoneValue"
                                    class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                    placeholder=" " required/>
                             <label for="emailMobile" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
@@ -57,7 +64,7 @@
                     <div class="grid grid-cols-2 gap-6">
                         <div class="relative z-0 w-full mb-5 group">
                             <div id="countryLabelMobil" class="select-container">
-                                <select id="countryMobile" name="country"  aria-labelledby="countryLabelMobil" class="text-left w-full rounded p-2 text-sm" formControlName="country">
+                                <select id="countryMobile" name="Country"  aria-labelledby="countryLabelMobil" class="text-left w-full rounded p-2 text-sm" formControlName="country"  [value]="countryValue">
                                     <option [value]="null">{{country}}</option>
                                     <option *ngFor="let country of countries"> {{ country.name.common }}</option>
                                 </select>
@@ -65,7 +72,7 @@
                         </div>
                         <div class="relative z-0 w-full mb-5 group ">
                             <div class="select-container">
-                                <input id="cityMobile" name="city" type="text" formControlName="city"
+                                <input id="cityMobile" name="City" type="text" formControlName="city"  [value]="cityValue"
                                        class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                        placeholder=" " required/>
                                 <label for="cityMobile" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
@@ -74,7 +81,7 @@
                         </div>
                     </div>
                     <div class="grid justify-center">
-                        <button type="submit" (click)="sendInformation()"
+                        <button type="submit" (click)="validaciones()"
                                 class="button-send w-full text-[#b9dd71] bg-[#4a546a] hover:bg-[#b9dd71]  hover:text-[#4a546a] focus:ring-4 focus:outline-none  font-extrabold rounded-lg   px-5 py-2.5 text-center dark:bg-[#4a546a] text-2xl">
                             Registrarme
                         </button>
@@ -96,24 +103,31 @@
             </div>
             <div class="flex justify-center my-10">
                 <div class="flex justify-center w-full">
-                    <form [formGroup]="formRegistration" class="text-start bg-white  md:w-1/2 p-5 rounded-2xl mx-2 shadow-gray-950 shadow-md">
+                    <form  method="post" name="contact-form" action=""  class="text-start bg-white  md:w-1/2 p-5 rounded-2xl mx-2 shadow-gray-950 shadow-md">
                         <div class="relative z-0 w-full mb-5 group">
-                            <input id="nameLastNameDesktop" name="nameLastName" type="text" formControlName="name"
+                            <input id="firstNameDesktop" name="First Name" type="text" formControlName="name"  [value]="nameValue"
                                    class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                    placeholder=" " required/>
-                            <label for="nameLastNameDesktop" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
+                            <label for="firstNameDesktop" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
                                 {{name}}</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-5 group">
+                            <input id="lastNameDesktop" name="Last Name" type="text" formControlName="lastName"
+                                   class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
+                                   placeholder=" " required/>
+                            <label for="lastNameDesktop" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoName + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
+                                {{lastName}}</label>
                         </div>
                         <div>
                             <div class="relative z-0 w-full mb-5 group">
-                                <input id="emailDesktop" name="email" type="email" formControlName="email"
+                                <input id="emailDesktop" name="Personal Email" type="email" formControlName="email"  [value]="emailValue"
                                        class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                        placeholder=" " required/>
                                 <label for="emailDesktop" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoEmail + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
                                     {{email}}</label>
                             </div>
                             <div class="relative z-0 w-full mb-5 group">
-                                <input  id="phoneDesktop" name="phone" type="number" formControlName="phone"
+                                <input  id="phoneDesktop" name="Cell Phone" type="number" formControlName="phone"  [value]="phoneValue"
                                        class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                        placeholder=" " required/>
                                 <label for="phoneDesktop" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoPhone + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
@@ -123,7 +137,7 @@
                         <div class="grid grid-cols-2 gap-6">
                             <div class="relative z-0 w-full mb-5 group ">
                                 <div id="countryLabelDesktop" class="select-container">
-                                    <select   id="countryDesktop" name="country" aria-labelledby="countryLabelDesktop" class="text-left w-full rounded p-2 text-sm" formControlName="country">
+                                    <select  [value]="countryValue"  id="countryDesktop" name="Country" aria-labelledby="countryLabelDesktop" class="text-left w-full rounded p-2 text-sm" formControlName="country">
                                         <option value="">{{country}}</option>
                                         <option *ngFor="let country of countries"> {{ country.name.common }}</option>
                                     </select>
@@ -131,7 +145,7 @@
                             </div>
                             <div class="relative z-0 w-full mb-5 group">
                                 <div class="relative z-0 w-full mb-5 group">
-                                    <input  id="cityDesktop" name="city" type="text" formControlName="city"
+                                    <input [value]="cityValue"  id="cityDesktop" name="City" type="text" formControlName="city"
                                            class="block pt-3 pb-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-[#4a546a] dark:border-gray-600 dark:focus:border-[#b9dd71] focus:outline-none focus:ring-0 focus:border-[#b9dd71] peer"
                                            placeholder=" " required/>
                                     <label for="cityDesktop" [className]="'peer-focus:font-medium absolute text-sm text-[#4a546a] dark:text-[#4a546a] duration-300 transform -translate-y-6 scale-90 top-2 -z-10 origin-[0] peer-focus:start-1 rtl:peer-focus:translate-x-1/4 peer-focus:text-[#b9dd71] ' + alertInfoCity + ' peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-6'">
@@ -140,7 +154,7 @@
                             </div>
                         </div>
                         <div class="grid justify-center">
-                            <button type="submit" (click)="sendInformation()"
+                            <button type="submit" (click)="validaciones()"
                                     class="button-send w-full text-[#b9dd71] bg-[#4a546a] hover:bg-[#b9dd71]  hover:text-[#4a546a] focus:ring-4 focus:outline-none  font-extrabold rounded-lg   px-5 py-2.5 text-center dark:bg-[#4a546a] text-2xl">
                                 Registrarme
                             </button>

@@ -4,13 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import {CountryServiceService} from "../service/country.service.service";
 import {CountryModel} from "../core/Country/Country.model";
 import Swal from 'sweetalert2'
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NgOptimizedImage, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterOutlet, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -23,19 +22,12 @@ export class AppComponent implements OnInit{
     });
     this.showCountries()
 
-    this.formRegistration = this.fb.group({
-      name:[null, [Validators.required]],
-      email: [null,  [Validators.required, Validators.email]],
-      phone: [null,[Validators.required]],
-      country: [null, [Validators.required]],
-      city:[null, [Validators.required]]
-    })
   }
 
   countries: CountryModel[];
   mostrarSeccion: boolean = false;
-  formRegistration: FormGroup;
-  name: string = 'Nombre y Apellido';
+  name: string = 'Nombre';
+  lastName: string = 'Apellidos';
   email: string = 'Email';
   phone: string = 'Teléfono';
   country: string = 'País';
@@ -45,8 +37,13 @@ export class AppComponent implements OnInit{
   alertInfoPhone: string= 'peer-focus:dark:text-[#b9dd71]';
   alertInfoCountry: string= 'peer-focus:dark:text-[#b9dd71]';
   alertInfoCity: string= 'peer-focus:dark:text-[#b9dd71]';
+  nameValue: any | null = null;
+  emailValue:  any| null = null;
+  phoneValue:  any| null = null;
+  countryValue: any | null = null;
+  cityValue: any | null = null;
 
-  constructor(private countryService: CountryServiceService, private fb:FormBuilder) {}
+  constructor(private countryService: CountryServiceService) {}
 
   showCountries = () => {
     this.countryService.getCountries().subscribe(listCountries => {
@@ -66,9 +63,9 @@ export class AppComponent implements OnInit{
     });
   }
 
-  sendInformation= () =>{
+  validaciones = () => {
 
-    if (this.formRegistration.get('name')?.invalid){
+    /*if(this.nameValue == null){
       this.alertInfoName='peer-focus:dark:text-red-600 dark:text-red-600';
       this.name = '*Ingrese un nombre';
     } else {
@@ -76,7 +73,7 @@ export class AppComponent implements OnInit{
       this.name = 'Nombre y Apellido';
     }
 
-    if (this.formRegistration.get('email')?.invalid){
+    if (this.emailValue == null) {
       this.alertInfoEmail='peer-focus:dark:text-red-600 dark:text-red-600';
       this.email = '*Ingrese un correo electrónico válido';
     } else {
@@ -84,8 +81,7 @@ export class AppComponent implements OnInit{
       this.email = 'Email';
     }
 
-
-    if (this.formRegistration.get('phone')?.invalid){
+    if (this.phoneValue == null) {
       this.alertInfoPhone='peer-focus:dark:text-red-600 dark:text-red-600';
       this.phone = '*Ingrese un número de teléfono';
     } else {
@@ -93,35 +89,35 @@ export class AppComponent implements OnInit{
       this.phone = 'Teléfono';
     }
 
-
-    if (this.formRegistration.get('country')?.invalid){
+    if (this.countryValue == null){
       this.alertInfoCountry='peer-focus:dark:text-red-600 dark:text-red-600';
       this.country = '*Ingrese un país';
     } else {
       this.alertInfoCountry='peer-focus:dark:text-[#b9dd71]';
       this.country = 'País';
     }
-
-
-    if (this.formRegistration.get('city')?.invalid){
+    if (this.cityValue == null){
       this.alertInfoCity='peer-focus:dark:text-red-600 dark:text-red-600'
       this.city = '*Ingrese ciudad';
     } else {
       this.alertInfoCity='peer-focus:dark:text-[#b9dd71]';
       this.city = 'Ciudad';
-    }
+    }*/
+    const scriptURL
+        = "https://script.google.com/macros/s/AKfycbw2Jvxc3tADPQnwBaz4LAMmhGLKJ13B2iXuJg4uDoEZWLQpZIlYau2-8S__BFNqmgT7zw/exec"
+    const form = document.forms[0]
 
-    if(this.formRegistration.valid) {
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(() => { window.location.reload(); })
+          .catch(error => console.error('Error!', error.message))
       Swal.fire({
         title: "¡Ya estás registrado!",
         text: "En los próximos días recibirás la invitación al webinar en el que contaré cómo invertir en los Estados Unidos.",
         icon: "success"
-      });
-
-      this.formRegistration.get('name')?.setValue(null);
-      this.formRegistration.get('email')?.setValue(null);
-      this.formRegistration.get('phone')?.setValue(null);
-      this.formRegistration.get('city')?.setValue(null);
-    }
+      }
+      );
+    })
   }
 }
