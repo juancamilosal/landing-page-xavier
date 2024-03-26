@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 
 
 @Component({
+
     selector: 'app-root',
     standalone: true,
     imports: [CommonModule, RouterOutlet, NgOptimizedImage],
@@ -20,10 +21,9 @@ export class AppComponent implements OnInit {
         window.addEventListener('resize', () => {
             this.mostrarSeccion = window.innerWidth >= 1024;
         });
-        this.showCountries()
-
-    }
-
+        this.showCountries()}
+  
+  
     countries: CountryModel[];
     mostrarSeccion: boolean = false;
     name: string = 'Nombre';
@@ -91,4 +91,4 @@ OK
             });
         });
     }
-}
+  
