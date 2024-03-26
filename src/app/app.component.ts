@@ -21,9 +21,10 @@ export class AppComponent implements OnInit {
         window.addEventListener('resize', () => {
             this.mostrarSeccion = window.innerWidth >= 1024;
         });
-        this.showCountries()}
-  
-  
+        this.showCountries()
+    }
+
+
     countries: CountryModel[];
     mostrarSeccion: boolean = false;
     name: string = 'Nombre';
@@ -83,7 +84,7 @@ export class AppComponent implements OnInit {
     te contaremos todo sobre el webinar y recibirás el 
     link para el día del evento.</h4>,
   `,
-              confirmButtonText: `
+                confirmButtonText: `
 <a   href="https://wa.me/13465814158" >
 OK
 </a>
@@ -91,4 +92,4 @@ OK
             });
         });
     }
-  
+}
