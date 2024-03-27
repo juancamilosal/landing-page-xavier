@@ -64,7 +64,7 @@
                     <div class="grid grid-cols-2 gap-6">
                         <div class="relative z-0 w-full mb-5 group">
                             <div id="countryLabelMobil" class="select-container">
-                                <select id="countryMobile" name="Country"  aria-labelledby="countryLabelMobil" class="text-left w-full rounded p-2 text-sm" formControlName="country"  [value]="countryValue">
+                                <select id="countryMobile" name="Country"  aria-labelledby="countryLabelMobil" class="text-left w-full rounded p-2 text-sm" formControlName="country"  [value]="countryValue" required>
                                     <option [value]="null">{{country}}</option>
                                     <option *ngFor="let country of countries"> {{ country.name.common }}</option>
                                 </select>
@@ -137,7 +137,7 @@
                         <div class="grid grid-cols-2 gap-6">
                             <div class="relative z-0 w-full mb-5 group ">
                                 <div id="countryLabelDesktop" class="select-container">
-                                    <select  [value]="countryValue"  id="countryDesktop" name="Country" aria-labelledby="countryLabelDesktop" class="text-left w-full rounded p-2 text-sm" formControlName="country">
+                                    <select  [value]="countryValue"  id="countryDesktop" name="Country" aria-labelledby="countryLabelDesktop" class="text-left w-full rounded p-2 text-sm" formControlName="country" required>
                                         <option value="">{{country}}</option>
                                         <option *ngFor="let country of countries"> {{ country.name.common }}</option>
                                     </select>
