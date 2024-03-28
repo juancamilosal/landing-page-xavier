@@ -2,12 +2,12 @@
     <div class="flex justify-start items-center">
         <img class="w-48" src="assets/img/LOGO-SEGUNDARIO.webp" alt="Logo Xavier Salcedo" height="733"
              width="1562">
-        <div class="fixed bottom-8 right-8 z-10">
-            <a href="https://wa.me/13465814158" aria-label="Link para WhatApp" target="_blank"
+        <button id="whastApp"  class="fixed bottom-8 right-8 z-10">
+            <a id="whastAppLink" href="https://wa.me/13465814158" aria-label="Link para WhatApp" target="_blank"
                class="flex items-center space-x-2 bg-green-400 hover:bg-white hover:text-[#4a546a] text-white py-3 px-4 rounded-full shadow-md">
                 <i class="fab fa-whatsapp text-3xl sm:text-5xl"></i>
             </a>
-        </div>
+        </button>
     </div>
 </header>
 
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="grid justify-center">
-                        <button type="submit" (click)="sendForm()"
+                        <button id="mobileRegistration" type="submit" (click)="sendForm()"
                                 class="button-send w-full text-[#b9dd71] bg-[#4a546a] hover:bg-[#b9dd71]  hover:text-[#4a546a] focus:ring-4 focus:outline-none  font-extrabold rounded-lg   px-5 py-2.5 text-center dark:bg-[#4a546a] text-2xl">
                             Registrarme
                         </button>
@@ -154,7 +154,7 @@
                             </div>
                         </div>
                         <div class="grid justify-center">
-                            <button type="submit" (click)="sendForm()"
+                            <button id="desktopRegistration" type="submit" (click)="sendForm() "
                                     class="button-send w-full text-[#b9dd71] bg-[#4a546a] hover:bg-[#b9dd71]  hover:text-[#4a546a] focus:ring-4 focus:outline-none  font-extrabold rounded-lg   px-5 py-2.5 text-center dark:bg-[#4a546a] text-2xl">
                                 Registrarme
                             </button>
